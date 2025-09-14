@@ -1,0 +1,9 @@
+en:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          discourse_media_watermark: "Discourse Media Watermark"
+  js:
+    discourse_media_watermark:
+      placeholder: placeholder
