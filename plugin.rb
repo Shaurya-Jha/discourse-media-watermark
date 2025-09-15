@@ -3,7 +3,8 @@
 # name: discourse-media-watermark
 # about: Synchronous watermarking for image and video uploads (works with S3 FileStore)
 # version: 1.0.0
-# authors: SJ
+# authors: Shaurya Jha
+# url: https://github.com/Shaurya-Jha/discourse-media-watermark
 
 gem "mini_magick", "4.12.0", require: false
 
