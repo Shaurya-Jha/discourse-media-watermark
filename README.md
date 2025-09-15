@@ -1,9 +1,35 @@
 # **Discourse Media Watermark** Plugin
 
-#### Summary
+### **Summary**
 A customized discourse plugin to add watermark to the videos and images that are uploaded in discourse forum.
 
-#### Usage
+### **Prerequisites**
+- FFmpeg should be installed on your machine in order for video watermarking to work. 
+- To check if the FFmpeg is installed in your system do the following -
+
+1. **Production** (Docker instance)
+    ```bash
+    cd /var/discourse
+
+    docker exec -it app bash        # enter docker instance
+
+    which ffmpeg        # this should give /usr/bin/ffmpeg
+
+    ffmpeg -version     # this will give something like this -> ffmpeg version 5.1.7-0+deb12u1 Copyright (c) 2000-2025 the FFmpeg developers
+    ```
+
+    - If you don't see the above two outputs it means ffmpeg libraries are not installed and video watermarking will not work. To fix this do the following in the following order.
+
+    ```bash
+    apt-get update or apt update        # efreshes the local list of available software packages
+
+    apt-get upgrade or apt upgrade      # upgrades all currently installed packages on a Debian-based Linux system to their most recent versions
+
+    apt-get install ffmpeg      # this will install the ffmpeg libraries
+    ```
+
+
+### **Usage**
 
 1. **Production (Docker instance)**
 - Add the following line to the app.yml in the plugin hooks.
